@@ -30,6 +30,7 @@
 		<link href="blog.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="assets/product-detail.css">
 		<link rel="stylesheet" type="text/css" href="assets/user-profile.css">
+		<link rel="stylesheet" type="text/css" href="assets/index-user.css">
 		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	</head>
 

@@ -56,7 +56,7 @@
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
-				<h1>Danh sách sản phẩm<span class="label label-default text-danger"> Khuyến mại</span></h1>
+				<h1 class="mt-5">Danh sách sản phẩm<span class="label label-default text-danger"> Khuyến mại</span></h1>
 			<div class="row">
 				<?php foreach ($pro_sale as $key => $value): ?>
 					<div class="col-lg-3" style="padding:10px;">
@@ -81,14 +81,14 @@
 			</section>
 
 			<section>
-				<h1>Danh sách sản phẩm<span class="label label-default text-danger"> Mới</span></h1>
+				<h1 class="mt-5">Danh sách sản phẩm<span class="label label-default text-danger"> Mới</span></h1>
 			
 			<div class="row">
 
 				<?php foreach ($pro_new as $key => $value): ?>
 					<div class="col-lg-3">
 						<div class="card text-center">
-							<img class="card-img-top" src="uploads/<?php echo $value['image'] ?>" alt="Card image cap">
+							<img class="card-img-top bg-image hover-zoom" src="uploads/<?php echo $value['image'] ?>" alt="Card image cap">
 							<div class="card-body">
 								<h4 class="card-title"><?php echo $value['name'] ?></h4>
 								<p class="card-text">
