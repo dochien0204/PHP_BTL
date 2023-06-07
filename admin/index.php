@@ -54,4 +54,4 @@
   </div>
   <!-- /.content-wrapper -->
 
- <?php include 'footer.php' ?>
+ <?php include '../../ShopStore-main/footer.php' ?>
