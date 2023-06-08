@@ -42,8 +42,8 @@
 									<img class="card-img-top" src="uploads/<?php echo $value['image'] ?>" alt="Card image cap">
 									<div class="card-body">
 										<h4 class="card-title"><?php echo $value['name'] ?></h4>
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-										<a href="#" class="btn btn-primary">Go somewhere</a>
+										<p class="card-text">Sản phẩm nằm trong top 10 sản phẩm đẹp nhất của cừa hàng</p>
+										<a href="product-detail.php?id=<?php echo $value['id'] ?>" class="btn btn-primary">Go somewhere</a>
 									</div>
 								</div>
 							</div>

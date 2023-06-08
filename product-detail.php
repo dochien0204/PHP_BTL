@@ -61,7 +61,7 @@
                                         <button type="submit"  class="btn btn-danger w-100">Thêm vào giỏ hàng</button>
                                     </div>
                                     <div class="col-lg-6">
-                                        <a href="#" class="btn btn-success w-100">Shop Now</a>
+                                        <a href="index.php" class="btn btn-success w-100">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
