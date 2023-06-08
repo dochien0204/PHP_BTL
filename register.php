@@ -13,7 +13,6 @@
         if (!$query) {
         }
         if($query){
-          echo "Có bug";
             header('location: login.php');
         }
     }

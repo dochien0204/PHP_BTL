@@ -1,9 +1,5 @@
 <?php 
-    include 'header.php';
-
-	//Get user session login
-	$user = isset($_SESSION['login']) ? $_SESSION['login'] : [];
-
+ include 'header.php'
 ?>
 <div class="container mt-5">
 	<div class="row justify-content-center">
@@ -18,7 +14,7 @@
 		            </div>
 		            <div class="row">
 		                <div class="col-md-12">
-		                    <form>
+		                    <form action="handler-update-profile.php" method="POST">
                               <div class="form-group row">
                                 <label for="name" class="col-4 col-form-label">Họ tên</label> 
                                 <div class="col-8">

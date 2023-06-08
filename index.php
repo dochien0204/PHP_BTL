@@ -102,7 +102,6 @@
 									
 								</p>
 								<a href="product-detail.php?id=<?php echo $value['id'] ?>" class="btn btn-primary">Xem chi tiết</a>
-								<a href="#" class="btn btn-success mt-1">Thêm vào giỏ hàng</a>
 							</div>
 						</div>
 					</div>
