@@ -38,7 +38,7 @@
 
 						<?php foreach ($product as $key => $value): ?>
 							<div class="col-lg-3">
-								<div class="card text-center">
+								<div class="card text-center h-100 overflow-hidden">
 									<img class="card-img-top" src="uploads/<?php echo $value['image'] ?>" alt="Card image cap">
 									<div class="card-body">
 										<h4 class="card-title"><?php echo $value['name'] ?></h4>
