@@ -14,7 +14,11 @@
 	
 	
 	if(isset($_GET['mess'])){
-		echo "<script>alert('đặt hàng thành công')</script>";
+		if (strcmp($_GET['mess'], "true")) {
+			echo "<script>alert('đặt hàng thanh cong')</script>";
+		} else {
+			echo "<script>alert('đặt hàng that bai')</script>";
+		}
 	}
  ?>
 

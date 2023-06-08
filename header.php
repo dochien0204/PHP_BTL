@@ -7,6 +7,7 @@
 	$user = isset($_SESSION['login']) ? $_SESSION['login'] : [];
 	$cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 
+	//check navbar active
  ?>
 
 <!DOCTYPE html>
@@ -31,6 +32,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/product-detail.css">
 		<link rel="stylesheet" type="text/css" href="assets/user-profile.css">
 		<link rel="stylesheet" type="text/css" href="assets/index-user.css">
+		<link rel="stylesheet" type="text/css" href="assets/profile.css">
 		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	</head>
 
@@ -53,13 +55,13 @@
 		        <a class="nav-link" href="product.php">Sản phẩm</a>
 		      </li>
 		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		          <?php  echo !empty($user) ? $user['name'] : 'Tài Khoản' ?>
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 		        	<?php if (!empty($user)): ?>
 		        		<a class="dropdown-item" href="logout.php">Đăng xuất</a>
-		        		<a class="dropdown-item" href="update-profile.php">Update Profile</a>
+		        		<a class="dropdown-item" href="profile.php">View Profile</a>
 		        	<?php else: ?>
 		        		<a class="dropdown-item" href="login.php">Đăng nhập</a>
 		          		<a class="dropdown-item" href="register.php">Đăng ký</a>

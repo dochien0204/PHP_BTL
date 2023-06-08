@@ -16,11 +16,13 @@
 				$quantity = $value['quantity'];
 				mysqli_query($conn,"INSERT INTO order_detail (order_id,product_id,price,quantity) VALUES ('$order_id',' $product_id','$price','$quantity')");
 			}
+			unset($_SESSION['cart']);
+			header('location: index.php?mess=true');
+		} else {
+			echo "<script>alert('Đặt hàng thất bại do không có sản phẩm nào trong giỏ hàng')</script>";
 		}
 
-		unset($_SESSION['cart']);
 
-		header('location: index.php?mess=true');
 	}
 	
  ?>
@@ -78,8 +80,7 @@
 								      	<?php echo $value['quantity'] ?>
 								      	
 								       </td>
-								      <td><?php echo $value['price'] ?></td>
-								      
+								      <td><?php echo $value['price'] ?></td>     
 							    </tr>
 						    <?php endforeach ?>
 						   

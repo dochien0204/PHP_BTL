@@ -12,13 +12,18 @@
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     $newPass = $_POST['newPass'];
-
-    $query = mysqli_query($conn, "UPDATE customer SET address = '$address' WHERE id = $id");
-    if ($query) {
-      header('location: index.php');
+    $pass = password_hash($newPass, PASSWORD_DEFAULT);
+    echo strcmp($newPass, "");
+    if (strcmp(trim($newPass), "") == 0) {
+        $query = mysqli_query($conn, "UPDATE customer SET name = '$name', email = '$email', phone = '$phone', address = '$address' WHERE id = $id");
     } else {
-      header('location: product.php');
+        $query = mysqli_query($conn, "UPDATE customer SET name = '$name', email = '$email', phone = '$phone', address = '$address', password = '$pass' WHERE id = $id");
     }
+    // if ($query) {
+    //   header('location: index.php');
+    // } else {
+    //   header('location: product.php');
+    // }
   }
 
 ?>
