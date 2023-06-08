@@ -1,0 +1,1 @@
+ALTER TABLE "orders" modify "id" int(10) AUTO_INCREMENT PRIMARY KEY;
