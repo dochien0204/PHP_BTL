@@ -13,17 +13,15 @@
     $address = $_POST['address'];
     $newPass = $_POST['newPass'];
     $pass = password_hash($newPass, PASSWORD_DEFAULT);
-    echo strcmp($newPass, "");
     if (strcmp(trim($newPass), "") == 0) {
         $query = mysqli_query($conn, "UPDATE customer SET name = '$name', email = '$email', phone = '$phone', address = '$address' WHERE id = $id");
     } else {
         $query = mysqli_query($conn, "UPDATE customer SET name = '$name', email = '$email', phone = '$phone', address = '$address', password = '$pass' WHERE id = $id");
     }
-    // if ($query) {
-    //   header('location: index.php');
-    // } else {
-    //   header('location: product.php');
-    // }
-  }
 
+    //Update session
+    include './update-session/user.php';
+    
+    header('location: profile.php');
+  }
 ?>
