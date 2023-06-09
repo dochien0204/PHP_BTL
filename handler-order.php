@@ -20,7 +20,7 @@
 			}
 			mysqli_commit($conn);
 			unset($_SESSION['cart']);
-			header('location: index.php?mess=true');
+			header('location: orders.php');
 		} else {
             mysqli_rollback($conn);
             header('location: index.php?error=true');

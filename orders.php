@@ -33,6 +33,10 @@
                                 <p class="small text-muted mb-1">Ngày đặt hàng</p>
                                 <p><?php echo date("m/d/y",$value['date']);?></p>
                             </div>
+                            <div class="col mb-3">
+                                <p class="small text-muted mb-1">Địa chỉ giao hàng</p>
+                                <p><?php echo $value['address'];?></p>
+                            </div>
                         </div>
 
                         <div class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
@@ -55,8 +59,8 @@
                             <?php endforeach ?>
                         </div>
 
-                        <div class="row my-4">
-                            <div class="col-md-4 offset-md-8 col-lg-3 offset-lg-9">
+                        <div class="row text-lg-left mt-2">
+                            <div class="col-md-4 offset-md-8 col-lg-5 offset-lg-9">
                                 <p class="lead fw-bold mb-0" style="color: #f37a27;">
                                     <?php echo number_format($value['total'])?>đ
                                 </p>
