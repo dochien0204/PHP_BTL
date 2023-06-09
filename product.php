@@ -23,7 +23,7 @@
 
 <div class="container-xxl mt-5 mx-5">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-3">
             <ul class="list-group nav nav-tabs">
                 <li class="list-group-item bg-primary">Danh mục sản phẩm</li>
                 <?php foreach ($category as $key => $value): ?>
@@ -46,8 +46,8 @@
                             alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $value['name'] ?></h4>
-                            <p class="card-text">Sản phẩm nằm trong top 10 sản phẩm đẹp nhất của cừa hàng</p>
-                            <a href="product-detail.php?id=<?php echo $value['id'] ?>" class="btn btn-primary">Go
+                            <p class="card-text h-10">Sản phẩm nằm trong top 10 sản phẩm đẹp nhất của cừa hàng</p>
+                            <a href="product-detail.php?id=<?php echo $value['id'] ?>" class="btn btn-primary h-10">Go
                                 somewhere</a>
                         </div>
                     </div>
