@@ -21,7 +21,7 @@
 
  ?>
 
-<div class="container mt-5">
+<div class="container-xxl mt-5 mx-5">
     <div class="row">
         <div class="col-lg-3">
             <ul class="list-group nav nav-tabs">
@@ -40,9 +40,10 @@
             <div class="row">
 
                 <?php foreach ($product as $key => $value): ?>
-                <div class="col-lg-3">
-                    <div class="card text-center h-100 overflow-hidden">
-                        <img class="card-img-top" src="uploads/<?php echo $value['image'] ?>" alt="Card image cap">
+                <div class="col-lg-3 mt-3" style="height: 591px;">
+                    <div class="card text-center overflow-hidden" style="height: 100%;">
+                        <img class="card-img-top" src="uploads/<?php echo $value['image'] ?>" style="height: 60%;"
+                            alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $value['name'] ?></h4>
                             <p class="card-text">Sản phẩm nằm trong top 10 sản phẩm đẹp nhất của cừa hàng</p>
