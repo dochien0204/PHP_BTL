@@ -8,7 +8,7 @@
 
 	// truy vấn lấy ra sản phẩm mới nhất 
 
-	$sql_pro_new = "SELECT * FROM product WHERE status = 1 ORDER BY id DESC";
+	$sql_pro_new = "SELECT * FROM product WHERE status = 1 ORDER BY id ASC";
 	$pro_new = mysqli_query($conn,$sql_pro_new);
 
 	
