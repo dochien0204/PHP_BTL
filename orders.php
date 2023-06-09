@@ -1,4 +1,8 @@
-<?php include 'header.php';
+<?php include 'header.php'; ?>
+<?php if (empty($user)): ?>
+<?php header('location: login.php');?>
+<?php else : ?>
+<?php 
         $userId = $user['id'];
         $query = "SELECT SUM(price) as total, id, order_date, status, address, phone  
         FROM orders    
@@ -14,7 +18,6 @@
         $textStyle2 = "text-white";
         $textStyle3 = "text-white";
 ?>
-
 <section class="h-100 h-custom" style="background-color: #eee;">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -70,12 +73,24 @@
                                     if ($value['status'] == 1) {
                                         $style1 = "";
                                         $textStyle1 = "";
-                                    } else if ($value['status' == 2]) {
+                                        $style2 = "background-color: #f37a27";
+                                        $style3 = "background-color: #f37a27";
+                                        $textStyle2 = "text-white";
+                                        $textStyle3 = "text-white";
+                                    } else if ($value['status'] == 2) {
                                         $style2 = "";
                                         $textStyle2 = "";
+                                        $style1 = "background-color: #f37a27";
+                                        $style3 = "background-color: #f37a27";
+                                        $textStyle1 = "text-white";
+                                        $textStyle3 = "text-white";
                                     } else {
                                         $style3 = "";
                                         $textStyle3 = "";
+                                        $style1 = "background-color: #f37a27";
+                                        $style2 = "background-color: #f37a27";
+                                        $textStyle1 = "text-white";
+                                        $textStyle2 = "text-white";
                                     }
                                     ?>
                                     <ul class="list-inline items d-flex justify-content-between">
@@ -119,4 +134,5 @@ function orderDetail(id) {
     window.location.href = "http://localhost:3000/PHP_BTL/order-detail.php?id=" + id;
 }
 </script>
+<?php endif ?>
 <?php include 'footer.php'?>
