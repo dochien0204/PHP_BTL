@@ -43,7 +43,7 @@
             </ol>
             <div class="carousel-inner center-block">
                 <div class="carousel-item active">
-                    <img class="img-fluid w-100 h-100" src="./uploads/banner-1.jpg" alt="First slide">
+                    <img class="img-fluid w-100 h-100 object-fit-cover" src="./uploads/banner-1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
                     <img class="img-fluid w-100 h-100" src="./uploads/banner2.jpg" alt="Second slide">
@@ -64,9 +64,10 @@
         <h1 class="mt-5">Danh sách sản phẩm<span class="label label-default text-danger"> Khuyến mại</span></h1>
         <div class="row">
             <?php foreach ($pro_sale as $key => $value): ?>
-            <div class="col-lg-3" style="padding:10px;">
-                <div class="card text-center">
-                    <img class="card-img-top" src="uploads/<?php echo $value['image'] ?>" alt="Card image cap">
+            <div class="col-lg-3 mt-3" style="padding:10px; height:488.7px;">
+                <div class="card text-center" style="height: 100%">
+                    <img class="card-img-top object-fit-cover" style="height: 60%"
+                        src="uploads/<?php echo $value['image'] ?>" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title"><?php echo $value['name'] ?></h4>
                         <p class="card-text">
@@ -92,10 +93,10 @@
         <div class="row">
 
             <?php foreach ($pro_new as $key => $value): ?>
-            <div class="col-lg-3">
-                <div class="card text-center">
-                    <img class="card-img-top bg-image hover-zoom" src="uploads/<?php echo $value['image'] ?>"
-                        alt="Card image cap">
+            <div class="col-lg-3 mt-3" style="height: 488.7px;">
+                <div class="card text-center" style="height: 100%">
+                    <img class="card-img-top bg-image hover-zoom" style="height: 60%;"
+                        src="uploads/<?php echo $value['image'] ?>" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title"><?php echo $value['name'] ?></h4>
                         <p class="card-text">
