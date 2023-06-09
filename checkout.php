@@ -41,11 +41,11 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">iamge</th>
-                        <th scope="col">quantity</th>
-                        <th scope="col">price</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Giá</th>
 
                         <th></th>
                     </tr>
