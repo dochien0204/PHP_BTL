@@ -4,7 +4,7 @@
     if (isset($_GET['id'])) {
     //Select order detail of user;
     $orderId = $_GET['id'];
-    $query = "SELECT order_detail.order_id as 'order_id', product.image as 'image', product.name as 'name', product.sale_price as 'price', order_detail.price as 'total-price', order_detail.quantity as 'quantity', orders.status as 'status'
+    $query = "SELECT order_detail.order_id as 'order_id', address, product.image as 'image', product.name as 'name', product.sale_price as 'price', order_detail.price as 'total-price', order_detail.quantity as 'quantity', orders.status as 'status'
     FROM order_detail 
     INNER JOIN product ON product.id = order_detail.product_id
     INNER JOIN orders ON orders.id = order_detail.order_id
@@ -112,15 +112,22 @@
                         </div>
 
                         <div class="d-flex justify-content-between pt-2">
-                            <p class="text-muted mb-0">Khách hàng : <?php echo $user['name'];?></p>
+                            <p class="text-muted mb-0"><span class="font-weight-bold">Khách hàng
+                                </span><?php echo $user['name'];?></p>
                         </div>
 
                         <div class="d-flex justify-content-between">
-                            <p class="text-muted mb-0">Số điện thoại : <?php echo $user['phone']?></p>
+                            <p class="text-muted mb-0"><span class="font-weight-bold">Số điện thoại:
+                                </span><?php echo $user['phone']?></p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="text-muted mb-0"><span class="font-weight-bold">Địa chỉ giao hàng:
+                                </span> <?php echo $value['address'];?></p>
                         </div>
 
                         <div class="d-flex justify-content-between mb-5">
-                            <p class="text-muted mb-0">Ngày order : <?php echo date("m/d/y",$value['date']);?></p>
+                            <p class="text-muted mb-0"><span class="font-weight-bold">Ngày order:
+                                </span><?php echo date("m/d/y",$value['date']);?></p>
                             <div class="card-footer border-0 px-4 py-5"
                                 style="background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
                                 <h5
@@ -131,6 +138,7 @@
                                 </h5>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
