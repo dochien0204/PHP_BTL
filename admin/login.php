@@ -16,11 +16,11 @@
               $_SESSION['admin'] = $data;
               header('location: index.php');
           }else{
-            echo "Sai thông tin tài khoản";
+            echo "<script>alert('Sai thông tin tài khoản')</script>";
           }
       } else{
-        echo "Sai thông tin tài khoản";
-      }
+        echo "<script>alert('Sai thông tin tài khoản')</script>";
+    }
     }
 
 
@@ -114,6 +114,7 @@
 </head>
 
 <body class="hold-transition login-page">
+    <!-- The Modal -->
     <div class="login-box">
         <div class="login-logo">
             <a href="../../index2.html"><b>Admin</b></a>
@@ -137,6 +138,7 @@
 
                 </div>
             </form>
+
             <div class="social-auth-links text-center">
                 <p>- OR -</p>
                 <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign

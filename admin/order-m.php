@@ -85,7 +85,9 @@
                                     class="btn btn-primary">
                                     <span class="fa fa-eye"></span>
                                 </a>
-
+                                <a href="edit-order.php?id=<?= $value['id'] ?>" title="Sửa" class="btn btn-primary">
+                                    <span class="fa fa-edit"></span>
+                                </a>
                             </td>
                         </tr>
                         <?php endforeach ?>

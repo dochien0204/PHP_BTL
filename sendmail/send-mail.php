@@ -1,11 +1,16 @@
 <?php 
+    include '../config/connect.php';
     use PHPMailer\PHPMailer\PHPMailer;
     
     require './PHPMailer/src/Exception.php';
     require './PHPMailer/src/PHPMailer.php';
     require './PHPMailer/src/SMTP.php';
 
-    if (isset($_POST['send'])) {
+    if (isset($_POST['email'])) {
+
+        //Save to database 
+        $email = $_POST['email'];
+        mysqli_query($conn, "INSERT INTO email_notifications (name) VALUES ('$email')");
         $mail = new PHPMailer(true);
         $mail -> isSMTP();
         $mail -> Host = 'smtp.gmail.com';

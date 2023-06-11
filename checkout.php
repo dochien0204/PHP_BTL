@@ -53,7 +53,7 @@
                 <tbody>
                     <?php foreach ($cart as $key => $value): ?>
                     <tr>
-                        <th scope="row">3</th>
+                        <th scope="row"><?php echo $value['id']; ?></th>
                         <td><?php echo $value['name'] ?></td>
                         <td><img src="uploads/<?php echo $value['image'] ?>" alt="" width="50px"></td>
                         <td>

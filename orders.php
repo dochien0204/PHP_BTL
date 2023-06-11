@@ -22,8 +22,9 @@
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <?php foreach ($result as $key => $value): ?>
-            <div class="col-lg-8 col-xl-6 pt-5">
-                <div class="card border-top border-bottom border-3" style="border-color: #f37a27 !important;"
+            <div class="col-lg-8 col-xl-6 pt-5" style="height: 650px;">
+                <div class="card border-top border-bottom border-3"
+                    style="border-color: #f37a27 !important; height: 100%;"
                     onclick="orderDetail(<?php echo $value['id'];?>)">
                     <div class="card-body p-5">
                         <p class="lead fw-bold mb-5" style="color: #f37a27;">Hóa đơn thanh toán</p>
